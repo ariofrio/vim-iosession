@@ -11,5 +11,9 @@ elseif exists("b:current_syntax")
 endif
 
 let b:current_syntax="iosession"
-syn match ioSessionOutput "<.*$"
-hi link ioSessionOutput Comment
+
+syn match ioSessionInputLead ">"
+syn match ioSessionOutputLine "<.*$"
+
+hi link ioSessionInputLead Comment
+hi link ioSessionOutputLine Comment
